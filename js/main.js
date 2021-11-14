@@ -21,9 +21,25 @@ function linkAction() {
 navLink.forEach((element) => element.addEventListener("click", linkAction));
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
-
+function scrollHeader() {
+  const header = document.getElementById("header");
+  if (scrollY >= 50) {
+    header.classList.add("scroll__header");
+  } else {
+    header.classList.remove("scroll__header");
+  }
+}
+window.addEventListener("scroll", scrollHeader);
 /*==================== SHOW SCROLL UP ====================*/
-
+function scrollUp() {
+  const scrollUp = document.querySelector(".scrollup");
+  if (scrollY >= 200) {
+    scrollUp.classList.add("show__scroll");
+  } else {
+    scrollUp.classList.remove("show__scroll");
+  }
+}
+window.addEventListener("scroll", scrollUp);
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
